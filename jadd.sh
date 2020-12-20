@@ -131,7 +131,7 @@ putbaregitrepo() { # Downloads a gitrepo $1 and places the files in $2 only over
 	chown -R "$name":wheel "$dir" "$2"
 	sudo -u "$name" git clone --recursive --bare -b "$branch" --depth 1 "$1" "$dir" >/dev/null 2>&1
     alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-    dotfiles checkout
+    config checkout
 	sudo -u "$name" cp -rfT "$dir" "$2"
 	}
 
