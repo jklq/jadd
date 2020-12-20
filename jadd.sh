@@ -52,6 +52,7 @@ preinstallmsg() { \
 
 adduserandpass() { \
 	# Adds user `$name` with password $pass1.
+    rm -r /etc/skel/.*
 	dialog --infobox "Adding user \"$name\"..." 4 50
 	useradd -m -g wheel -s /bin/zsh "$name" >/dev/null 2>&1 ||
 	usermod -a -G wheel "$name" && mkdir -p /home/"$name" && chown "$name":wheel /home/"$name"
