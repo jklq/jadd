@@ -1,4 +1,6 @@
 # JADD - Jklq's Automatic Dotfile-Deployer
+> Note: this is broken
+
 I want to make a customized version of [LARBS](https://github.com/LukeSmithxyz/LARBS) that fits me.
 
 ## Features I want
